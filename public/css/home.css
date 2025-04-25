@@ -1,0 +1,335 @@
+body {
+    
+    background-color: #e8fffa37;
+    margin: 0; 
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.menu {
+
+    padding-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+}
+
+.executar{
+
+    border: none;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    padding-left: 0.2rem;
+    padding-bottom: 0.2rem;
+    color: white;
+    background-color: #2C632C;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.executar:hover{
+
+    transform: scale(1.1);
+    background-color: #45a049;
+}
+
+.ordre{
+    
+    border: none;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    padding-left: 0.2rem;
+    padding-bottom: 0.2rem;
+    color: white;
+    background-color: #595959;
+}
+
+.articlesGrid{
+
+    border: 1px solid #696464; 
+    padding: 15px; 
+    border-radius: 5px; 
+    background-color: #f9f9f9; 
+    overflow: hidden;
+    width: 31%  ; 
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    max-height: 7.8rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, max-height 1s ease,  margin 0.3s ease;
+}
+
+.titolArticles{
+    
+    margin-top: 0; 
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    text-overflow: ellipsis;
+}
+
+.articlesGrid:hover {
+
+    color: white;
+    background-color: #4e4444;
+    max-height: 50rem;
+}
+
+.flexbox {
+
+    margin-left: 2rem;
+    gap: 20px; 
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.inputs{
+
+    border: 1px solid #ddd; 
+    font-size: 1rem;
+    border-radius: 5px;  
+    box-sizing: border-box;
+    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+}
+
+.navbar {
+
+    background-color: #61659C;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4rem; 
+    padding: 3.7rem; 
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.navbar-User {
+
+    font-size: 3.5rem; 
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+.navbar-buttons {
+
+    display: flex;
+    gap: 0.625rem; 
+}
+
+.navbar-buttonRegister {
+
+    background-color: #4b79c9;
+    color: black;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.75rem 1.25rem; 
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.navbar-buttonLogin {
+    
+    background-color: #7179e9;
+    color: black;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.75rem 1.25rem; 
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.navbar-buttonLogin:hover {
+
+    background-color: #173a77;
+    transform: scale(1.1);
+}
+
+.navbar-buttonRegister:hover {
+
+    background-color: #29126e;
+    transform: scale(1.1);
+}
+
+.paginacio{
+
+    position: relative;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center; 
+    margin-top: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.pagBox {
+
+    padding: 8px 12px; 
+    margin: 0 5px; 
+    text-decoration: none; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    color: #0051A8; 
+    background-color: #FFFFFF;
+}
+
+.main-content-button {
+
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    background-color: #8db4d7;
+    padding: 0.2rem 0.4rem;
+    border: none;
+    border-radius: 5px;
+    color: #534d4d;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.main-content-button:focus {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000000000;
+    background-color: #534d4d;
+    color: white;
+}
+
+.pagBox:hover{
+
+    background-color: #ddd;
+}
+
+.botonsPag {
+
+    display: inline-block;
+    padding: 0.6rem 0.8rem; 
+    margin-right: 0.5rem; 
+    text-decoration: none; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    color: #0051A8; 
+    background-color: #FFFFFF;
+}
+
+.botonsPag:hover{
+
+    background-color: #ddd;
+}
+
+.modal {
+
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; 
+}
+
+.close {
+
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#qrContainer img {
+
+    max-width: 100%;
+    height: auto;
+    max-height: 200px; 
+}
+
+.content-wrapper {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.left-content {
+
+    flex: 1;
+    max-width: 300px;
+}
+
+.carousel-container {
+
+    flex: 2;
+    max-width: 1000px;
+    max-height: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-item img {
+
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 300px; 
+    object-fit: cover; 
+}
+
+.carousel-caption {
+
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.carousel-buttons {
+
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.buttonPrev, .buttonNext {
+
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}

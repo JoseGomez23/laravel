@@ -1,0 +1,167 @@
+body {
+    background-color: #e8fffa37;
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.delete-link {
+    
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+th, td {
+
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+
+    background-color: #f2f2f2;
+    padding-top: 3%;
+}
+
+
+
+tr:hover {
+
+    background-color: #f1f1f1;
+}
+
+a {
+
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+
+    text-decoration: underline;
+    color: #0e4747;
+}
+
+form {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input[type="submit"] {
+
+    font-size: 1rem;
+    border: 1px solid #a5b8c9;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    background-color: #345b6e5a;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+
+    background-color: #4a6882;
+    transform: scale(1.1);
+}
+
+.modal {
+
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.modal.show {
+
+    display: block; 
+    opacity: 1; 
+}
+
+.modal-content {
+
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    text-align: center;
+    transform: translateY(-20px); 
+    opacity: 0; 
+    animation: slideIn 0.3s ease forwards; 
+}
+
+.modal-content.close-animation {
+
+    animation: slideOut 0.3s ease forwards; 
+}
+
+.close {
+
+    color: red;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-actions button {
+
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.confirm {
+
+    background-color: red;
+    color: white;
+}
+
+.cancel {
+    
+    background-color: gray;
+    color: white;
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
