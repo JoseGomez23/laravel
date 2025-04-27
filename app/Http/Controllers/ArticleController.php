@@ -27,7 +27,7 @@ class ArticleController extends Controller
     public function logedHome(Request $request)
     {
         $user = Auth::user();
-
+        
         $articlesPerPage = request('articlesperpag');
         if ($articlesPerPage) {
             cookie()->queue('articles_per_page', $articlesPerPage, 60);
@@ -40,7 +40,8 @@ class ArticleController extends Controller
 
         $articles = "";
         
-        if($user->admin = 1) {
+        if($user->admin == 1) {
+            
             $articles = Articles::adminGetArticles($articlesPerPage, $name, $ordre);
         } else {
             $articles = Articles::userArticles($user->correu, $articlesPerPage, $name, $ordre);

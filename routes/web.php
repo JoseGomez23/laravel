@@ -89,16 +89,16 @@ Route::middleware(['web'])->group(function () {
     Route::post('/recuperar', [PwdController::class, 'enviarCorreu'])->name('recuperar.email');
 
     Route::view('/pwdReset/{token}', 'recuperar')->name('recuperar');
-    Route::post('/pwdReset/{token}', [PwdController::class, 'resetPwd'])->name('recuperar');
+    Route::post('/pwdReset/{token}', [PwdController::class, 'resetPwd']);
 
     Route::view('/api',  'apiView')->name('api');
     Route::get('/api', [ApiController::class, 'getPostres']);
 
-    Route::view('/api/{titol}',  'apiView')->name('api');
+    Route::view('/api/{titol}',  'apiView')->name('apiF');
     Route::get('/api/{titol}', [ApiController::class, 'fiteredPostres']);
 
     Route::view('/resetPwd', 'resetPwd')->name('resetPwd')->middleware('auth');
-    Route::post('/resetPwd', [PwdController::class, 'resetManualPwd'])->name('resetPwd');
+    Route::post('/resetPwd', [PwdController::class, 'resetManualPwd']);
 
 });
 
